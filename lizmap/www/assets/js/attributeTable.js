@@ -1403,7 +1403,7 @@ var lizAttributeTable = function() {
                                 colConf['mRender'] = function( data, type, full, meta ){
                                     // Translate field ( language translation OR code->label translation )
                                     var tdata = valueMapInAttributeTable( aName, data, type, full, meta );
-
+                                    var colMeta = meta.settings.aoColumns[meta.col];
                                     // Replace media and URL with links
                                     if( !tdata || !( typeof tdata === 'string') )
                                         return tdata;
